@@ -6,8 +6,8 @@
       stroke: #000000;
     }
   </style>
-    <script href='/wbBlink101/led.js'></script>
-    <script href='/wbBlink101/app.js'></script>
+    <script href='led.js'></script>
+    <script href='app.js'></script>
 
 
     <circle id="circle1" cx="225" cy="150" r="50" fill="#ff0000" fill-opacity="0.2" onclick="lightIt(this.id)"/>
