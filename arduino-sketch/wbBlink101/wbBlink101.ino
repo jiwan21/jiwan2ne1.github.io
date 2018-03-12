@@ -15,7 +15,7 @@
 // pins for each LED specified here
 #define BLECONNECT 3
 
-#define YELLOWLED 4 
+#define YELLOWLED 13 
 #define BLUELED 5
 #define GREENLED 6
 #define REDLED 7
@@ -58,16 +58,16 @@ class LED{
   */
   void setRate() 
   {
-    if (rateIndex == 3)
+    if (rateIndex == 1)
     { 
       rateIndex = 0;
-      ledOn = false;
-      digitalWrite(pin,ledOn);
+      //ledOn = false;
+      //digitalWrite(pin,ledOn);
     }
     else
     {
       rateIndex = rateIndex + 1; 
-      ledOn = true; 
+      //ledOn = true; 
     }
   }
 
@@ -75,12 +75,11 @@ class LED{
   {
 
     if (rateIndex != 0) { 
-      if ((millis()-lastSwitch) > (rates[rateIndex]))
-      {
-        lastSwitch = millis();
-        ledOn = !ledOn;
-        digitalWrite(pin,ledOn);              
-      }
+        digitalWrite(pin,1);              
+    }
+    else
+    {
+      digitalWrite(pin,0);
     }
   }
 
@@ -92,8 +91,8 @@ class LED{
 
 /* establish BLE service & characteristics */
 BLEPeripheral blePeripheral;
-BLEService ledService("917649a3-d98e-11e5-9eec-0002a5d5c51b");
-BLEUnsignedCharCharacteristic ledCharacteristic("917649a4-d98e-11e5-9eec-0002a5d5c51b", BLEWrite);
+BLEService ledService("e3abe582-ccc2-4641-ab9c-22df1d5f543f");
+BLEUnsignedCharCharacteristic ledCharacteristic("e3abe582-ccc2-4641-ab9c-22df1d5f543f", BLEWrite);
 BLEDescriptor exp3Descriptor("2902","exp");
 
 LED redLED(REDLED);
@@ -195,3 +194,4 @@ void ledCharacteristicWritten(BLECentral& central, BLECharacteristic& characteri
   }
 
 }  
+
