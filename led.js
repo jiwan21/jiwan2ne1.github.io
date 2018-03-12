@@ -11,8 +11,8 @@
       */
     constructor() {
         this.deviceName = 'blink';
-        this.serviceUUID =   '917649a3-d98e-11e5-9eec-0002a5d5c51b';
-        this.ledUUID =       '917649a4-d98e-11e5-9eec-0002a5d5c51b';
+        this.serviceUUID =   'e3abe582-ccc2-4641-ab9c-22df1d5f543f';
+        this.ledUUID =       'e3abe582-ccc2-4641-ab9c-22df1d5f543f';
         this.device = null;
         this.server = null;
         // The cache allows us to hold on to characeristics for access in response to user commands
