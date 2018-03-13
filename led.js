@@ -10,7 +10,7 @@
       * customize your project here to reflect the uuid of your service and characteristics.
       */
     constructor() {
-        this.deviceName = 'blink';
+        this.deviceName = 'ATML';
         this.serviceUUID =   '731f9837-0a26-4071-82a8-8f46629ce1d5';
         this.ledUUID =       '731f9837-0a26-4071-82a8-8f46629ce1d5';
         this.device = null;
