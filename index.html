@@ -2,16 +2,14 @@
 <html lang="en">
   <head>
       <style>
-        div.gallery {
-          margin: 5px;
-          float: left;
-          width: 180px;
+        div.imag {
+            width: 100%;
+            height:100%;
+            overflow: hidden;
         }
-
-        div.gallery:hover {
-        border: 1px solid #777;
+        div.col-sm-2{
+            height: 100%;
         }
-
         div.gallery img {
         width: 100%;
         height: auto;
@@ -21,47 +19,92 @@
         padding: 15px;
         text-align: center;
         }
-        </style>
+          p{
+              text-align: center;
+              height: 100%;
+          }
+          
+    </style>
     <title>M117 Project Winter 2018</title>
     <link rel="stylesheet" type="text/css" href="jiwan2ne1.github.io/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="jiwan2ne1.github.io/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="jiwan2ne1.github.io/fonts/fontawesome-webfont.ttf"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src='./led.js'></script>
+    <script src='./app.js'></script>
   </head>
   <body>
     <br/>
-      <div style="text-align:center"><h1 class="title"> LDR Lights with Corgis!</h1></div>
-      <div class="page-content"> <!-- OUTER DIV-->
-        <script src='./led.js'></script>
-        <script src='./app.js'></script>
-        
-        <div style="text-align:center; position:absolute; left:150px; width:950px">
-            <div class="gallery">
-                <img src = "images/bluetooth.png" height="100" id="blecircle" onclick = "bleConnect(this.id)"/>
-            <div class="desc">Bluetooth (called blink)</div>
+      
+      <div class="page-content" style="width: 1500px"> <!-- OUTER DIV-->
+        <div class="row" style="width: 100%; height 100px;">
+            <h1 class="title" style="margin: 0 auto; width: 500; text-align: center; margin: 40px"> LDR Lights with Corgis!</h1>
+            <img src = "images/bluetooth.png" height="100" id="blecircle" onclick = "bleConnect(this.id)" style="position: fixed; left: 30px; top: 10px;"/>
+            <div class="desc" style="position: fixed; left: 10px; top: 110px;">Bluetooth <br /> (called blink)</div>
+        </div>
+        <div class="row" style="width: 100%; height: 200px;">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+                <div class = "imag">
+                    <img src = "images/scaredpic.jpg" height="100%" id="circle1" onclick = "lightIt(this.id)">
+                  
+                </div>
             </div>
 
-            <div class="gallery">
-                <img src = "images/scaredpic.jpg" height="200" id="circle1" onclick = "lightIt(this.id)">
-            <div class="desc">Scared</div>
+            <div class="col-sm-2">
+                <div class = "imag">
+                    <img src = "images/happypic.jpg" height="100%" id="circle2" onclick = "lightIt(this.id)">
+                    <div class="desc">Happy</div>
+                </div>
             </div>
 
-            <div class="gallery">
-                <img src = "images/happypic.jpg" height="200" id="circle2" onclick = "lightIt(this.id)">
-            <div class="desc">Happy</div>
-            </div>
-
-            <div class="gallery">
-                <img src = "images/tiredpic.jpg" height="200" id="circle3" onclick = "lightIt(this.id)">
-            <div class="desc">Tired</div>
+            <div class="col-sm-2">
+                <div class = "imag">
+                    <img src = "images/tiredpic.jpg" height="100%" id="circle3" onclick = "lightIt(this.id)">
+                    <div class="desc">Tired</div>
+                </div>
             </div>
             
-            <div class="gallery">
-                <img src = "images/sadpic.jpg" height="200" id="circle4" onclick = "lightIt(this.id)">
-            <div class="desc">Sad</div>
+            <div class="col-sm-2">
+                <div class = "imag">
+                    <img src = "images/sadpic.jpg" height="100%" id="circle4" onclick = "lightIt(this.id)">
+                    <div class="desc">Sad</div>
+                </div>
             </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <div class="row" style="width: 100%; height: 20px;">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+                <p>Scared</p>
+            </div>
+            <div class="col-sm-2">
+                <p>Happy</p>
+            </div>
+            <div class="col-sm-2">
+                <p>Tired</p>
+            </div>
+            <div class="col-sm-2">
+                <p>Sad</p>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <div class="row" style="width: 100%; height 200px;">
+            <div class="col-sm-1">
+           
+            </div>
+        </div>
         </div>
         
      <!-- <div style="text-align:center;"><object id="ui-svg" width="825" height="900" type="image/svg+xml" data="jiwan2ne1.github.io/images/leds.svg"></object>-->
-    </div> <!-- CLOSE OUTER DIV-->
+    
+      
+      </div> <!-- CLOSE OUTER DIV-->
   </body>
 </html>
