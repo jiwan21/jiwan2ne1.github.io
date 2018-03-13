@@ -11,8 +11,8 @@
       */
     constructor() {
         this.deviceName = 'ATML';
-        this.serviceUUID =   '731f9837-0a26-4071-82a8-8f46629ce1d5';
-        this.ledUUID =       '731f9837-0a26-4071-82a8-8f46629ce1d5';
+        this.serviceUUID =   '1778e84e-ab9a-4900-a712-5deab48553a6';
+        this.ledUUID =       '1778e84e-ab9a-4900-a712-5deab48553a6';
         this.device = null;
         this.server = null;
         // The cache allows us to hold on to characeristics for access in response to user commands
