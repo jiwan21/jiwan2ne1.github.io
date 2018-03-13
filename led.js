@@ -61,7 +61,7 @@
 }
 
 
-// makes the led object available to therest of the program, remeber to change this to reflect your project
+// makes the led object available to the rest of the program, remember to change this to reflect your project
 window.led = new LED();
 
 })();
